@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Patient;
 use App\Http\Requests;
+use App\Appointment;
 
 class PatientController extends Controller
 {
@@ -31,6 +32,11 @@ class PatientController extends Controller
         $id = request()->route("id");
         $id2 = request()->route("id2");
         $result = Appointment::all()->where('PATIENT_id', intval($id))->where('id', intval($id2));
-        return response()->json($result->current());
+	reset($result);
+	if (count($result)) {
+	    return response()->json($result{0});
+	} else {
+	    return response()->json(array());
+	}
     }
 }

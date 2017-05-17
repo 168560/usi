@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Doctor;
 use App\Http\Requests;
+use App\Appointment;
 
 class DoctorController extends Controller
 {
