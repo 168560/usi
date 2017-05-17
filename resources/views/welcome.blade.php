@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Hello world</div>
+                <div class="title">Projekt USI 2017 IwB</div>
             </div>
         </div>
     </body>
