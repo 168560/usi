@@ -5,6 +5,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Doctor extends Model{
     protected $table = "DOCTOR";
+    protected $guarded = [];
     public $timestamps = false;
     
     public function speciality(){
